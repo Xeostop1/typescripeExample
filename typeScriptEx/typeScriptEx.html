@@ -176,6 +176,85 @@
 // const e=superPrint([1,2,3,4,true]);
 
 
+//다형성 폴리머피즘(多形)2
+
+// type SuperPrint={
+//     // (arr:number[]):void
+//     // (arr: boolean[]):void //리턴값이 없을때는 보이드라고 적어줌 
+//     // (arr:string[]):void
+//         // <T>(arr:T[]):T;   //제너릭 표현 그냥 나열만 해줘도 되네 
+//         <T,V>(arr:T[], b:V):T;   //제너릭 표현 그냥 나열만 해줘도 되네 
+//     // <TypePlaceholder>(arr: TypePlaceholder[]):void;
+//     // <PrintItem>(arr:PrintItem[]):void;  //제너릭을 정해주면 알아서 기본타입을 타입스크립트가 찾아줌 
+//     // <PrintItem>(arr:PrintItem[]):PrintItem;  //리턴값이 있을 때는 똑같이 제너릭 써주만 돼 
+
+// }
+// // const superPrint:SuperPrint =(arr)=>{
+// //     arr.forEach(i=> console.log(i));
+// // }
+
+// const superPrint:SuperPrint=(a)=>a[0];
+
+
+// const f=superPrint([1,2,3,4],"x");
+// const g=superPrint([true,false,true],2);
+// const r=superPrint(["1","2"],true);
+// const e=superPrint([1,2,3,4,true],[]);
+
+
+// //제너릭을 아래와 같이 사용도 가능함
+// function printAllNum(arr:Array<number>){
+//     arr.forEach(i=>console.log(i))
+// }
+// function printAllStr(arr:Array<string>){
+//     arr.forEach(i=>console.log(i))
+// }
+
+// // printAllNum(["2",3,3]);  //str 오류
+// printAllNum([3,3]);
+// // printAllStr(['str',2]); //num이라 오류
+// printAllStr(["hello","type"]);
+
+// //만약에 리액트에 typeScript을 사용한다
+// //useState() (x)
+// //useState<number>();       //타입을 확정해서 리액트에 알려줌
+
+
+//타입스크립트로 객체지향프로그래밍을 해보자   //자바시간 같아 ㅋㅋㅋ 
+//추상 클래스(여기서는 User)는 오직 다른 곳에 상속받을 수있는 클래스 인스턴스(상품/ 객체)을 직접 만들 수 없음
+// abstract class User{
+//     constructor(
+//         private firstName:string,   //js로 보면 바로 this으로 처리해주고 메서드 인자로 처리해줌 
+//         private lastName:string,
+//         public nickname:string
+//     ){}
+//     getFullName(){
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+//     //이렇게 하면 private 메서드도 만들 수 있다 
+//     private setFullName(){
+//         return `${this.getFullName()}`;
+//     }
+//     //추상메서드도 가능하다! 추상메서드란? 상속받은 곳에서 직접 설계할 수 있는 폼만 있는 형태의 메서드
+//     //여기서는 Player따로 기능을 만들어줘야함
+//     abstract getNickName():void;
+// }
+
+
+// class Player extends User{  
+//      getNickName(){
+//         console.log(this.nickname);
+//     }
+// }
+
+// const mita=new Player("mita", "sato", "moja");
+// // const moja=new User("mita", "sato", "moja"); (x)
+
+// mita.nickname="moni";
+// mita.getFullName();
+
+
+
 
 
 // }
