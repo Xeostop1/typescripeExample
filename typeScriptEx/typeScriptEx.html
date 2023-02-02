@@ -253,6 +253,84 @@
 // mita.nickname="moni";
 // mita.getFullName();
 
+//해시맵
+// type Words={
+//     //오브젝트 타입을 설정
+//     [key:string]:string
+// }
+// class Dict{
+//     private words:Words;
+//     //컨스터럭쳐에 넣어야 하나? 컨스트럭쳐가 수동으로 인잇해준데? 와이?? 
+//     constructor(){
+//         this.words={}
+//     }
+//     add(word:Word){
+//         if(this.words[word.term]===undefined){
+//             this.words[word.term]=word.def;
+//         }
+//     }
+//     getWord(term:string){
+//         return this.words[term];
+//     }
+// }
+
+// class Word{
+//     constructor(
+//         public term:string,
+//         public def:string){}
+// }
+
+// const kimchi=new Word("kimchi", "koreaFood");
+
+// const dict= new Dict();
+// dict.add(kimchi);
+// dict.getWord("kimchi");
+
+// //Recap  망했다 여기 어려운데?? 
+//인터페이스
+
+// type Nickname=string;
+// type HealthBar=number;
+// type Friends=Array<string>;
+
+// //위에 타입을 따로 빼서 넣어준 것 
+// type Player2={
+//     nickname:HealthBar,
+//     healthBar:HealthBar
+// }
+
+
+//플레이어는 오브젝트 타입
+// type Player={
+//     nickname:string,
+//     healthBar:number
+// }
+
+// const mofi:Player={
+//     nickname:"mofi",
+//     healthBar:10
+// }
+// //음식은 stiring 타입
+// type Food=string;
+// const tomato:Food="delicious"
+
+//특별한 타입을 따로 지정한 오브젝트 타입만들기
+// type Team="red" | "blue" | "yellow"
+// //이렇게 써주면 특정한 대가 중에 한 개만 특정하여 스트링타입으로 사용가능함
+
+// type Health=1|5|10
+
+// type SoccerPlayer={
+//     nickname:string,
+//     team:Team,
+//     health:Health
+// }
+// const mifi:SoccerPlayer={
+//     nickname:"mifi",
+//     team:"blue",
+//     health:1
+
+// }
 
 
 
