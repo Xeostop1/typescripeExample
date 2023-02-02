@@ -332,6 +332,75 @@
 
 // }
 
+//위와 같은결과의 다른 방식
+// type User={
+//     name:string
+// }
+// type BasketP=User &{
+
+// }
+
+// const ruji: BasketP={
+//     name:"ruji"
+// }
+
+
+
+//추상클래스의 인터페이스화     구\구~구구
+interface Ueser{
+    //인터페이스에서는 생성자를 명명할 필요가 없다
+    firstName:string,
+     lastName:string ,
+    // constructor(
+    //     protected firstName:string,
+    //     protected lastName:string 
+    // ){}
+    //추상메서드라 나는 이걸 상속받으면 꼭 구현을 해야함
+     sayHi(name:string):string
+     fullName():string
+}
+//임플리먼트랑 인터페이스는 타입스크립트에만 존재하서 좀더 가볍게 사용가능함
+//js로 변환했을때 코드에 뭔가 없음
+//그래서 임플리먼트로 받았을 때 여기에 생성자를 만들어서 사용
+//인터페이스의 퍼플릭 접근제한자만 사용가능(private도 못쓰고 무조건 퍼블릭만 쓸수 있나봐 )
+//인터페이스의 장점이나 단점이네
+//그리고 인터페이스는 2개이상의 타입을 상속(오브젝트)받을 수있다
+
+// interface Ball{
+//     // balltype:string,
+//     ballNum:number
+    
+// }
+
+// class PlayerBasket implements Ueser, Ball{
+//     constructor(
+//         public firstName:string,
+//         public lastName:string,
+//         public ballNum:number,
+//         // public ballType:string       아니 왜안되는데???
+//     ){}      
+//     fullName(){
+//         return `${this.firstName} ${this.lastName}`
+//     }
+//     sayHi(name:string){
+//         return `hello ${name}. My name is ${this.fullName()}`
+//     }
+// }
+
+// function makeUser(user:Ueser){
+//     return "hello";
+// }
+
+// makeUser({
+//     firstName:"mori",
+//     lastName:"chiyo",
+//     fullName:()=>"wooweak",
+//     sayHi:(name)=> "str"
+// });//함수화 하여 바로 만들기
+
+//큰일이 났구만 추상이랑 상속나와서 너무 어려워 ㅠㅠ 
+
+
 
 
 
