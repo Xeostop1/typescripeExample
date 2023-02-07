@@ -385,8 +385,44 @@
       //이번주 부터 빡시겠구만
       // }
 
-      let fetch;
+      let num=0;
       //여기도 axois도 가능한가??
+//다형성, 제너릭(플레이스 홀더), +인터페이스
+
+
+// interface SStorage<T>{
+//     [key:string]:T
+// }
+
+// //재너릭T을 사용 
+// class LocalStorgae<T>{
+//     private storge:SStorage<T>={}
+//         set(key:string, value:T){
+//             this.storge[key]=value;
+//         }
+//         remove(key:string){
+//             delete this.storge[key]
+//         }
+//         get(key:string):T{
+//             return this.storge[key]
+//         }
+//         clear(){
+//             this.storge={}
+//         }
+// }
+
+// //여기서 get메서드를 사용하면 제너릭에 따라서 스트링으로 세팅해준 값은 str로 나오고 블리언으로 세팅해준 객체는 블리언 값으 가지고 있음
+// const stringsStorage=new LocalStorgae<string>()
+// stringsStorage.get("key")
+// const boolensStorage=new LocalStorgae<boolean>()
+// boolensStorage.get("str")
+// boolensStorage.set("hello",true)
+
+
+
+
+
+
 
 // https://nomadcoders.co/typescript-for-beginners/lectures/3672
 //6:04 까지 시청
