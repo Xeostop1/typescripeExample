@@ -1,0 +1,22 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build":"tsc" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xeostop1/typescripeExample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xeostop1/typescripeExample/issues"
+  },
+  "homepage": "https://github.com/Xeostop1/typescripeExample#readme",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
